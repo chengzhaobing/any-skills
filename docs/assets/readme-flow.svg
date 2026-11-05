@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070D1A"/>
+      <stop offset="0.55" stop-color="#0B1528"/>
+      <stop offset="1" stop-color="#0A1224"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="cardFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16223C"/>
+      <stop offset="1" stop-color="#0E172B"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#7DA0C4"/>
+    </pattern>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#FBBF24"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#34D399"/>
+    </marker>
+    <marker id="arrowViolet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#A78BFA"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <ellipse cx="140" cy="60" rx="300" ry="200" fill="url(#glowCyan)"/>
+  <ellipse cx="1080" cy="500" rx="320" ry="200" fill="url(#glowViolet)"/>
+  <rect width="1200" height="520" fill="url(#dots)" opacity="0.12"/>
+
+  <!-- 标题 -->
+  <g>
+    <rect x="48" y="34" width="44" height="44" rx="13" fill="url(#logoGrad)"/>
+    <path d="M70 43 C72 52 73.5 53.5 82 55.5 C73.5 57.5 72 59 70 68 C68 59 66.5 57.5 58 55.5 C66.5 53.5 68 52 70 43 Z" fill="#FFFFFF"/>
+    <text x="104" y="59" font-size="27" font-weight="700" fill="#F8FAFC">一条指令的执行路径</text>
+    <text x="105" y="82" font-size="12.5" fill="#93A5C4">第 1 步由你发起，第 2–6 步由 AI 完成</text>
+  </g>
+
+  <!-- 分组标签 -->
+  <g font-size="12" letter-spacing="0.5">
+    <circle cx="51" cy="181" r="3" fill="#FBBF24"/>
+    <text x="62" y="185" fill="#FCD34D">你</text>
+    <circle cx="241" cy="181" r="3" fill="#34D399"/>
+    <text x="252" y="185" fill="#6EE7B7">AI · 读取仓库</text>
+    <circle cx="811" cy="181" r="3" fill="#A78BFA"/>
+    <text x="822" y="185" fill="#C4B5FD">AI · 在你的客户端执行</text>
+  </g>
+
+  <!-- 步骤卡片 -->
+  <g>
+    <rect x="45" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#FBBF24" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="59" y="217" width="32" height="3" rx="1.5" fill="#FBBF24" opacity="0.9"/>
+    <circle cx="75" cy="265" r="14" fill="#FBBF24" fill-opacity="0.14" stroke="#FBBF24" stroke-opacity="0.5"/>
+    <text x="75" y="270" font-size="12.5" font-weight="700" fill="#FDE68A" text-anchor="middle">1</text>
+    <text x="99" y="271" font-size="17" font-weight="600" fill="#FDE68A">复制指令</text>
+  </g>
+  <g>
+    <rect x="235" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#34D399" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="249" y="217" width="32" height="3" rx="1.5" fill="#34D399" opacity="0.9"/>
+    <circle cx="265" cy="265" r="14" fill="#34D399" fill-opacity="0.14" stroke="#34D399" stroke-opacity="0.5"/>
+    <text x="265" y="270" font-size="12.5" font-weight="700" fill="#A7F3D0" text-anchor="middle">2</text>
+    <text x="289" y="271" font-size="17" font-weight="600" fill="#D1FAE5">打开仓库</text>
+  </g>
+  <g>
+    <rect x="425" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#34D399" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="439" y="217" width="32" height="3" rx="1.5" fill="#34D399" opacity="0.9"/>
+    <circle cx="455" cy="265" r="14" fill="#34D399" fill-opacity="0.14" stroke="#34D399" stroke-opacity="0.5"/>
+    <text x="455" y="270" font-size="12.5" font-weight="700" fill="#A7F3D0" text-anchor="middle">3</text>
+    <text x="479" y="271" font-size="17" font-weight="600" fill="#D1FAE5">挑选技能</text>
+  </g>
+  <g>
+    <rect x="615" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#34D399" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="629" y="217" width="32" height="3" rx="1.5" fill="#34D399" opacity="0.9"/>
+    <circle cx="645" cy="265" r="14" fill="#34D399" fill-opacity="0.14" stroke="#34D399" stroke-opacity="0.5"/>
+    <text x="645" y="270" font-size="12.5" font-weight="700" fill="#A7F3D0" text-anchor="middle">4</text>
+    <text x="669" y="271" font-size="17" font-weight="600" fill="#D1FAE5">读取规则</text>
+  </g>
+  <g>
+    <rect x="805" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="819" y="217" width="32" height="3" rx="1.5" fill="#A78BFA" opacity="0.9"/>
+    <circle cx="835" cy="265" r="14" fill="#A78BFA" fill-opacity="0.14" stroke="#A78BFA" stroke-opacity="0.5"/>
+    <text x="835" y="270" font-size="12.5" font-weight="700" fill="#DDD6FE" text-anchor="middle">5</text>
+    <text x="859" y="271" font-size="17" font-weight="600" fill="#EDE9FE">执行任务</text>
+  </g>
+  <g>
+    <rect x="995" y="205" width="160" height="120" rx="16" fill="url(#cardFill)" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="1009" y="217" width="32" height="3" rx="1.5" fill="#A78BFA" opacity="0.9"/>
+    <circle cx="1025" cy="265" r="14" fill="#A78BFA" fill-opacity="0.14" stroke="#A78BFA" stroke-opacity="0.5"/>
+    <text x="1025" y="270" font-size="12.5" font-weight="700" fill="#DDD6FE" text-anchor="middle">6</text>
+    <text x="1049" y="271" font-size="17" font-weight="600" fill="#EDE9FE">产出结果</text>
+  </g>
+
+  <!-- 流向 -->
+  <g>
+    <line x1="205" y1="265" x2="229" y2="265" stroke="#FBBF24" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <line x1="395" y1="265" x2="419" y2="265" stroke="#34D399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <line x1="585" y1="265" x2="609" y2="265" stroke="#34D399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <line x1="775" y1="265" x2="799" y2="265" stroke="#A78BFA" stroke-width="2" marker-end="url(#arrowViolet)"/>
+    <line x1="965" y1="265" x2="989" y2="265" stroke="#A78BFA" stroke-width="2" marker-end="url(#arrowViolet)"/>
+  </g>
+
+  <!-- 失败提示 -->
+  <g>
+    <rect x="48" y="362" width="1104" height="108" rx="18" fill="#FFFFFF" fill-opacity="0.035" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="72" y="393" font-size="11" fill="#8FA3C4" letter-spacing="1.2">卡住了？按顺序换路径</text>
+    <g font-size="12.5" fill="#C7D3E6">
+      <circle cx="78" cy="421" r="6" fill="#34D399" fill-opacity="0.16" stroke="#34D399" stroke-opacity="0.5"/>
+      <text x="92" y="425">确认仓库公开可访问</text>
+      <circle cx="342" cy="421" r="6" fill="#34D399" fill-opacity="0.16" stroke="#34D399" stroke-opacity="0.5"/>
+      <text x="356" y="425">改用 raw 单文件链接</text>
+      <circle cx="638" cy="421" r="6" fill="#34D399" fill-opacity="0.16" stroke="#34D399" stroke-opacity="0.5"/>
+      <text x="652" y="425">仍失败就把 .md 放到本地 skills 目录</text>
+    </g>
+    <text x="72" y="452" font-size="11" fill="#7F93B2">保留原始报错再换路径，不要反复重试；回执里写清卡在哪一步。</text>
+  </g>
+</svg>

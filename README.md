@@ -6,27 +6,11 @@
 
 ## 复制即用
 
-把仓库地址和下面这句话一起发给 AI：
-
-**仓库地址**
+复制后把任务接在后面即可。
 
 ```text
-https://github.com/chengzhaobing/any-skills
+使用https://github.com/chengzhaobing/any-skills/blob/main/skills/multi-agent.md技能完成下列任务***
 ```
-
-**一句话指令**
-
-```text
-复制GitHub仓库地址，让AI读取使用
-```
-
-AI 会打开仓库，按你的目标挑出对应技能并执行。目标已经很明确时，也可以只给它单个技能文件：
-
-```text
-https://github.com/chengzhaobing/any-skills/blob/main/skills/multi-agent.md
-```
-
-想离线使用，把 `.md` 放进所用客户端的 skills 目录即可；各客户端目录位置不同，以其文档为准。
 
 ## 已收录技能
 

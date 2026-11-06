@@ -29,7 +29,7 @@
 
 ### 多 agent 目录约定
 
-![多 agent 目录结构图：main.md 负责分流，员工只读自己的任务书，回执写进同一个 Feedback 文件](docs/assets/readme-directory.png)
+![多 agent 目录结构图：main.md 负责分流，员工只读自己的任务书，完成情况写进 acceptance 下各自的文件](docs/assets/readme-directory.png)
 
 `main.md` 是所有员工共同先读的入口，员工按分流表找到自己那一行，只读自己那份任务书。
 
@@ -37,15 +37,16 @@
 |---|---|
 | `main.md` | 共同必读：任务背景、目标、接口契约、通用规则、分流表 |
 | `员工1.md / 员工2.md / 员工3.md` | 各自任务书：文件白名单、锁定接口、验收要求 |
-| `Task <编号> Feedback.md` | 共同回执：每人只写自己那一节 |
+| `acceptance/{员工}.md` | 各自的完成情况：只由本人写，与任务书同名 |
+| `acceptance/CEO-review.md` | CEO 汇总与审查记录：员工不读、不写 |
 
-读取边界：不读他人的 md，不改他人的回执小节；读不到就停下说明，冲突由 CEO 裁决。
+读取边界：不读他人的任务书，也不读他人的完成情况；写只写自己那一份，读不到就停下说明。
 
-### 回执闭环
+### 完成情况闭环
 
-![回执闭环图：员工执行后写回执小节并只回复「已完成」，CEO 读共同 Feedback、跑全量验证，输出完成情况与下一步计划](docs/assets/readme-feedback.png)
+![完成情况闭环图：员工执行后写自己那份 acceptance 文件并只回复「已完成」，CEO 一次读全目录、跑全量验证，汇总完成情况与下一步计划](docs/assets/readme-acceptance.png)
 
-员工写文件、CEO 读文件，口头回复只用于通知：员工只回一句「已完成」，CEO 读 Feedback 核对真实产出，再跑全量构建与整体验证，最后给出「本次完成情况 + 下一步任务计划」。
+员工写文件、CEO 读文件，口头回复只用于通知：员工只写 `acceptance/{自己}.md` 并回一句「已完成」；CEO 一次读整个目录、逐份核对真实产出，再跑全量构建与整体验证，最后给出「本次完成情况 + 下一步任务计划」。
 
 并行期员工只做定向检查，全量检查留到 CEO 收口，避免多会话互相检出对方半成品。
 
@@ -60,7 +61,7 @@
 
 | 技能 | 用来做什么 | 文件 |
 |---|---|---|
-| 项目 CEO（多 Agent 总指挥） | 把项目拆成任务，派给多个 AI 员工（Trae、Claude Code、Codex 等），汇总回执、逐项验收 | [skills/multi-agent.md](skills/multi-agent.md) |
+| 项目 CEO（多 Agent 总指挥） | 把项目拆成任务，派给多个 AI 员工（Trae、Claude Code、Codex 等），读取各自的完成情况、逐项验收 | [skills/multi-agent.md](skills/multi-agent.md) |
 
 ## 相比传统反代：无封号风险
 
@@ -100,8 +101,8 @@ any-skills/
 │   └── assets/
 │       ├── og-architecture.svg / .png      # 分享预览图（1200×630）
 │       ├── readme-difficulty.svg / .png    # 任务难度分流图（1200×540）
-│       ├── readme-directory.svg / .png     # 多 agent 目录结构图（1200×560）
-│       ├── readme-feedback.svg / .png      # 回执闭环图（1200×520）
+│       ├── readme-directory.svg / .png     # 多 agent 目录结构图（1200×600）
+│       ├── readme-acceptance.svg / .png    # 完成情况闭环图（1200×520）
 │       └── og-meta.html                    # og:image / twitter:image 元信息
 └── skills/
     └── multi-agent.md

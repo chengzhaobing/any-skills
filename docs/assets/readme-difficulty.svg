@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" font-family="'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070D1A"/>
+      <stop offset="0.55" stop-color="#0B1528"/>
+      <stop offset="1" stop-color="#0A1224"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="cardFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16223C"/>
+      <stop offset="1" stop-color="#0E172B"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#7DA0C4"/>
+    </pattern>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#34D399"/>
+    </marker>
+    <marker id="arrowViolet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#A78BFA"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="540" fill="url(#bg)"/>
+  <ellipse cx="140" cy="50" rx="300" ry="200" fill="url(#glowCyan)"/>
+  <ellipse cx="1080" cy="520" rx="300" ry="180" fill="url(#glowViolet)"/>
+  <rect width="1200" height="540" fill="url(#dots)" opacity="0.12"/>
+
+  <!-- 标题 -->
+  <g>
+    <rect x="48" y="30" width="44" height="44" rx="13" fill="url(#logoGrad)"/>
+    <path d="M70 39 C72 48 73.5 49.5 82 51.5 C73.5 53.5 72 55 70 64 C68 55 66.5 53.5 58 51.5 C66.5 49.5 68 48 70 39 Z" fill="#FFFFFF"/>
+    <text x="104" y="57" font-size="27" font-weight="700" fill="#F8FAFC">先判难度，再决定怎么执行</text>
+    <text x="105" y="80" font-size="12.5" fill="#93A5C4">5 个维度：文件数量 · 跨模块 · 共享契约 · 是否并行 · 验收复杂度</text>
+  </g>
+
+  <!-- 入口与评判 -->
+  <g>
+    <rect x="480" y="104" width="240" height="62" rx="16" fill="url(#cardFill)" stroke="#FBBF24" stroke-opacity="0.4" stroke-width="1.2"/>
+    <text x="600" y="142" font-size="18" font-weight="600" fill="#FDE68A" text-anchor="middle">任务进入</text>
+
+    <line x1="600" y1="166" x2="600" y2="198" stroke="#22D3EE" stroke-width="2"/>
+    <path d="M594 194 L600 204 L606 194 Z" fill="#22D3EE"/>
+
+    <rect x="480" y="204" width="240" height="64" rx="16" fill="url(#cardFill)" stroke="#22D3EE" stroke-opacity="0.45" stroke-width="1.2"/>
+    <text x="600" y="232" font-size="17" font-weight="600" fill="#E6F9FF" text-anchor="middle">CEO 评判难度</text>
+    <text x="600" y="252" font-size="10.5" fill="#8FA3C4" text-anchor="middle">按 5 个维度打分</text>
+  </g>
+
+  <!-- 分支箭头 -->
+  <g>
+    <path d="M600 268 Q520 292 314 300" fill="none" stroke="#34D399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <path d="M600 268 Q680 292 886 300" fill="none" stroke="#A78BFA" stroke-width="2" marker-end="url(#arrowViolet)"/>
+  </g>
+
+  <!-- 简单分支 -->
+  <g>
+    <rect x="48" y="300" width="520" height="150" rx="18" fill="url(#cardFill)" stroke="#34D399" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="72" y="316" width="34" height="3" rx="1.5" fill="#34D399" opacity="0.9"/>
+    <text x="72" y="338" font-size="13" font-weight="600" fill="#6EE7B7">简单任务</text>
+    <text x="72" y="356" font-size="10.5" fill="#8FA3C4">不建目录，CEO 直接做完</text>
+
+    <rect x="72" y="374" width="140" height="54" rx="12" fill="#34D399" fill-opacity="0.08" stroke="#34D399" stroke-opacity="0.25"/>
+    <text x="142" y="406" font-size="12.5" fill="#D1FAE5" text-anchor="middle">CEO 直接解决</text>
+    <line x1="212" y1="401" x2="222" y2="401" stroke="#34D399" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
+
+    <rect x="228" y="374" width="100" height="54" rx="12" fill="#34D399" fill-opacity="0.08" stroke="#34D399" stroke-opacity="0.25"/>
+    <text x="278" y="406" font-size="12.5" fill="#D1FAE5" text-anchor="middle">自测</text>
+    <line x1="328" y1="401" x2="338" y2="401" stroke="#34D399" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
+
+    <rect x="344" y="374" width="100" height="54" rx="12" fill="#34D399" fill-opacity="0.08" stroke="#34D399" stroke-opacity="0.25"/>
+    <text x="394" y="406" font-size="12.5" fill="#D1FAE5" text-anchor="middle">交付</text>
+  </g>
+
+  <!-- 复杂分支 -->
+  <g>
+    <rect x="632" y="300" width="520" height="150" rx="18" fill="url(#cardFill)" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1.2"/>
+    <rect x="656" y="316" width="34" height="3" rx="1.5" fill="#A78BFA" opacity="0.9"/>
+    <text x="656" y="338" font-size="13" font-weight="600" fill="#C4B5FD">复杂任务</text>
+    <text x="656" y="356" font-size="10.5" fill="#8FA3C4">才建目录、写任务书、并行执行</text>
+
+    <rect x="656" y="374" width="150" height="54" rx="12" fill="#A78BFA" fill-opacity="0.08" stroke="#A78BFA" stroke-opacity="0.25"/>
+    <text x="731" y="406" font-size="12.5" fill="#EDE9FE" text-anchor="middle">建 task-&lt;编号&gt;</text>
+    <line x1="806" y1="401" x2="816" y2="401" stroke="#A78BFA" stroke-width="1.8" marker-end="url(#arrowViolet)"/>
+
+    <rect x="824" y="374" width="150" height="54" rx="12" fill="#A78BFA" fill-opacity="0.08" stroke="#A78BFA" stroke-opacity="0.25"/>
+    <text x="899" y="406" font-size="12.5" fill="#EDE9FE" text-anchor="middle">拆分员工任务</text>
+    <line x1="974" y1="401" x2="984" y2="401" stroke="#A78BFA" stroke-width="1.8" marker-end="url(#arrowViolet)"/>
+
+    <rect x="992" y="374" width="120" height="54" rx="12" fill="#A78BFA" fill-opacity="0.08" stroke="#A78BFA" stroke-opacity="0.25"/>
+    <text x="1052" y="406" font-size="12.5" fill="#EDE9FE" text-anchor="middle">并行执行</text>
+  </g>
+
+  <text x="600" y="492" font-size="11.5" fill="#8FA3C4" text-anchor="middle">判不准先按简单做；跨模块或改共享契约，再升级为复杂任务。</text>
+</svg>
